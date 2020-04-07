@@ -109,7 +109,7 @@ app.get('/:articleName', function(req,res){
   //articleName=article-one
   //articles[articleName]=={} content object for article one.
   var articleName=req.params.articleName;
-  //To extract the variable articlename
+  //The above was To extract the variable articlename
   res.send(createTemplate(Articles[articleName]));
 })
 
@@ -128,6 +128,15 @@ app.get('/ui/madi.png', function (req, res) {
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
+
+
+var counter=0;
+app.get('/counter', function (req, res) {
+  counter=counter + 1;
+  res.send(counter.toString());
+});
+
+
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
 app.listen(8080, function () {
