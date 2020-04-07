@@ -7,8 +7,13 @@ element.innerHTML = "I have been changed using JavaScript";
 
 //Make "madi" move when clicked on :-
 var img=document.getElementById("madi");
-img.onclick=function()
-{
-    img.style.marginLeft = '100px';
 
+var marginleft=0;
+function moveRight(){
+    marginleft=marginleft+10;
+    img.style.marginleft=marginleft+'px';
+}
+
+img.onclick=function(){
+    var interval=serInterval(moveRight,100);
 }
