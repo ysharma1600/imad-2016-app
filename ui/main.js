@@ -1,4 +1,4 @@
-/*console.log('Loaded!');
+console.log('Loaded!');
 
 //Change the HTML Text :-
 var element = document.getElementById("main text");
@@ -17,7 +17,7 @@ function moveRight(){
 
 img.onclick=function(){
     var interval=setInterval(moveRight,50);
-}*/
+}
 
 //Counter code
 
