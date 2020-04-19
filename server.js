@@ -105,9 +105,7 @@ app.get('/', function (req, res) {
 var counter=0;
 app.get('/counter', function (req, res) {
   counter=counter + 1;
-  <p>The counter page has been requested</p>
   res.send(counter.toString());
-  <p>times.</p>
 });
 
 var names=[];
