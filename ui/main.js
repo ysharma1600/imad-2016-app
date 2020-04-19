@@ -57,6 +57,7 @@ submit.onclick = function(){
          if(request.readyState === XMLHttpRequest.DONE){
              //take some action
              if(request.status===200){
+                 console.log(request.responseText);
                 var names=request.responseText;
                 names=JSON.parse(names);
                 var list = '';
@@ -73,7 +74,8 @@ submit.onclick = function(){
  
      //Make the request
      var nameInput = document.getElementById('name');
-     var name = nameInput.Value;
+     var name = nameInput.value;
+     console.log('sending name' + name);
      request.open('GET', 'http://localhost:8080/submit-name?name=' + name , true)
      request.send(null);
     //make a request to the server and send the name.
